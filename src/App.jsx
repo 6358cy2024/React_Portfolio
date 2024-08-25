@@ -1,53 +1,33 @@
-import {useEffect, useState} from 'react'
-import axios from 'axios'
-//use all hooks with use Effect
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 function App() {
-  const [characters, setCharacters] = useState()
+  const title = 'My Portfolio'
 
-  useEffect(() => {
-    axios.get('https://swapi.dev/api/people',{
-    })//route is interchangeable,
-    .then(res => {
-      setCharacters(res.data.results)
-    })
-
-  }, [])//cannot use await async for this
   return (
     <>
-      <h1>Main Page</h1>
-      {characters.map((charObj, index) => {
-          return(
-            <div key={index}>
-              <h3>Name: {charObj.name}</h3>
-              <p>Birth Year: {charObj.birth_year}</p>
-            </div>
-          )
-      })}
+      <Header title={title} />
+
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+
+      <Footer />
     </>
   )
 }
 
 export default App
-
-
-const users = [
-  {
-    name: 'Christian',
-    age: 22
-  },
-  {
-    name: 'James',
-    age: 23
-  }
-]
-const userStrings = users.map((userObj) => {//converting elements
-  return (
-  <div>
-    <h3>Name: {userObj.name}</h3>
-    <p>Age: {userObj.age}</p>
-  </div>
-  )
-})
-
-console.log(userStrings)
