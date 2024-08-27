@@ -2,10 +2,10 @@ import WorkItem from '../components/WorkItem'
 
 const apps = [
   {
-    title: 'Weather App',
-    description: 'A cool weather application I made that lets you search by city to get the local weather.',
+    title: 'Employee Tracker',
+    description: 'This uses SQL to create a terminal program that allows you to look/update/delete entries from a table of employees.',
     image: '/images/portfolio_ss.png',
-    technologies: 'HTML | CSS | JS | DayJS'
+    technologies: 'SQL | JS | pgAdmin4 '
   },
   {
     title: 'Tech Blog',
@@ -32,7 +32,7 @@ function Home() {
       <section className="home-hero column align-center">
         <img src="/images/Christian.jpg" alt="Me" />
 
-        <h1 className="text-center">Dev and Designer</h1>
+        <h1 className="text-center">Dev, Designer, Computer Engineer BS</h1>
       </section>
 
       <section className="work">
