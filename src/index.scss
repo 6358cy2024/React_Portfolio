@@ -67,7 +67,7 @@ button {
 // CUSTOM STYLES
 header {
   padding: 10px 5%;
-  background: #555;
+  background: #848383;
   color: #eee;
   margin-bottom: 25px;
   nav {
@@ -119,6 +119,12 @@ section.work {
   }
 }
 
+.aboutBox{
+  display: flex;
+  margin: 10px;
+  background:#1bd5da;
+  padding: 10px;
+}
 
 // Contact Page Styles
 form.contact-form {
@@ -151,9 +157,12 @@ form.contact-form {
 }
 
 // 404 Page
-.sad-image {
+.dino-image {
   width: 400px;
   margin-bottom: 20px;
 }
 
 // Footer styles
+footer.main-footer {
+  width: 100%;
+}

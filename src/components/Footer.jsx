@@ -8,7 +8,8 @@ const footerStyles = {
     return (
       <footer style={footerStyles} className="main-footer row justify-between align-center">
         <p>Copyright 2024</p>
-        <p>Created By Rutgers Class</p>
+        <a href="https://github.com/6358cy2024">My Github Page</a>
+        <p>Created By Christian Yanez</p>
       </footer>
     )
   }
